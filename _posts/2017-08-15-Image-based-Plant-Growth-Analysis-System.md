@@ -29,12 +29,12 @@ These are samples of each datasets:
 
 **1) Object Detection**
 
-In tomato plant images, there are black tapes which farmers put. This has to be clearly detected to measure the length of the tomato plants. At first, color filtering and edge detection were applied. It seemed working, but it failed when the brightness of images is different. To solve this problem, TensorBox, which is TensorFlow opensource Object Detection using GoogLeNet-OverFeat algorithm was tried. With this Object Detection, black tapes were extremely well detected regardless of the brightness or any other factors.
+In tomato plant images, there are black tapes which farmers put. This has to be clearly detected to measure the length of the tomato plants. At first, color filtering and edge detection were applied. It seemed working, but it failed when the brightness of images is different. To solve this problem, [TensorBox](https://github.com/Russell91/TensorBox), which is TensorFlow opensource Object Detection using GoogLeNet-OverFeat algorithm was tried. With this Object Detection, black tapes were extremely well detected regardless of the brightness or any other factors.
 
 For the stem, it was same as Black Tape Detection, but after the detection, the stem was cropped and with this cropped image, edge detection was applied.
 
 
-Red Circle Detection was also achieved by TensorBox, but after detection, because the bounding box of the detector was too large, so the result of the image was cropped and some circle detection in Python OpenCV was applied.
+Red Circle Detection was also achieved by [TensorBox](https://github.com/Russell91/TensorBox), but after detection, because the bounding box of the detector was too large, so the result of the image was cropped and some circle detection in Python OpenCV was applied.
 
 ![Sample Images](/img/tomato/plant2_1.jpg){:width="600"}
 ![Sample Images](/img/tomato/stem2_1.jpg){:width="600"}
@@ -55,7 +55,7 @@ There were some multiple object predictions on one object, so the object that ha
 
 **1) Object Detection**
 
-TensorBox is used for detecting all the flowers and fruits in a image. In this time, multiple objects have to be detected. However, some other objects were detected during the test. Other objects were including leaves, bud, unripe fruits, some other things. In this detection, the number of flowers and fruits were uncertain because of the detection of other objects.
+[TensorBox](https://github.com/Russell91/TensorBox) is used for detecting all the flowers and fruits in a image. In this time, multiple objects have to be detected. However, some other objects were detected during the test. Other objects were including leaves, bud, unripe fruits, some other things. In this detection, the number of flowers and fruits were uncertain because of the detection of other objects.
 
 
 ![Sample Images](/img/tomato/fruit2.jpg){:width="600"}
@@ -63,7 +63,7 @@ TensorBox is used for detecting all the flowers and fruits in a image. In this t
 
 **2) CNN**
 
-To get rid of other objects in the detection process, CNN technique was applied to distinct the flowers and fruits. For the CNN, TensorFlow Slim is used and especially, for the pre-trained weight, Inception-ResNet-v2 model was tried to get more high accuracy. In the training, cropped images after the object detection was used and there are two classes including fruit and others. for the flowers, it is assumed that there are flowers and candidates including bud and others. After CNN could get rid of non flowers and non fruits, flowers and fruits were detected better than just applying the object detection.
+To get rid of other objects in the detection process, CNN technique was applied to distinct the flowers and fruits. For the CNN, TensorFlow [Slim](https://github.com/tensorflow/models/tree/master/research/slim) is used and especially, for the pre-trained weight, Inception-ResNet-v2 model was tried to get more high accuracy. In the training, cropped images after the object detection was used and there are two classes including fruit and others. for the flowers, it is assumed that there are flowers and candidates including bud and others. After CNN could get rid of non flowers and non fruits, flowers and fruits were detected better than just applying the object detection.
 
 - **fruit results of CNN**
 
@@ -75,7 +75,7 @@ To get rid of other objects in the detection process, CNN technique was applied 
 
 **3) Semantic Segmentation**
 
-To figure out the shape of flowers and fruits, Semantic Segmentation is used. In here, KittiSeg TensorFlow opensource software was applied. Trained with masked images from cropped flowers and fruits in object detection. Although the color of fruits and stems were very similar, this could segment only fruits. It was also worked even there was an overlay between multiple fruits and flowers.
+To figure out the shape of flowers and fruits, Semantic Segmentation is used. In here, [KittiSeg](https://github.com/MarvinTeichmann/KittiSeg) TensorFlow opensource software was applied. Trained with masked images from cropped flowers and fruits in object detection. Although the color of fruits and stems were very similar, this could segment only fruits. It was also worked even there was an overlay between multiple fruits and flowers.
 
 - **fruit results of Segmentation**
 
