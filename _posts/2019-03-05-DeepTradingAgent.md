@@ -85,6 +85,11 @@ In training set, I used all the data I have and from 2014 to 2018, long position
 ![Sample Images](/img/deep-trading-agent/bitmex_short-2017-01-01-2017-12-31.png){:width="600"}
 ![Sample Images](/img/deep-trading-agent/bitmex_short-2018-01-01-2018-12-31.png){:width="600"}
 
+## Code
+
+This is a prototype of the project([deep-trading-bot](https://github.com/jk7g14/ethermembership)).
+
+This does not support BitMex environment, but supports normal crpyto trading exchanges.
 <br />
 
 ---
