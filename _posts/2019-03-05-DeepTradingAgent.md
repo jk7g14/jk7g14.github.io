@@ -34,10 +34,10 @@ In this project, I used 1 hour candle because this was the minimum candle which 
 
 ## Reward Function
 ```
-Unrealized PnL = ($1/Average_Entry_Price - $1/Current Price) * Contract Quentity
+Unrealized PnL = ($1/Average_Entry_Price - $1/Current Price) * Contract Quantity
 ```
 
-For the reward, unrealized PnL(Profit & Loss) is used in both short and long positions. For example, if we are in short position, Contract Quentity is minus, so this equation works in both positions. Furthemore, each price has to divide $1 because basic currency in BitMex is BTC, the amount of bitcoin (we call it [Satoshi](https://en.bitcoin.it/wiki/Satoshi_(unit)))
+For the reward, unrealized PnL(Profit & Loss) is used in both short and long positions. For example, if we are in short position, Contract Quantity is minus, so this equation works in both positions. Furthemore, each price has to divide $1 because basic currency in BitMex is BTC, the amount of bitcoin (we call it [Satoshi](https://en.bitcoin.it/wiki/Satoshi_(unit)))
 ## Agent
 
 Final form of our agent is like this. Because market may go up trend or down trand, if we are in one position, we cannot take a profit all the time. 
