@@ -55,7 +55,7 @@ Even if agent takes a lot of profits, the limitation of bet size is required to 
 Because this is Futures Exchange, there is liquidation price which makes you bankrupt. Therefore, stop loss is required. In this project, stop loss is operated when profit is -3% when the laverage are x5(short) and x4(long).
 
 
-## Result
+## Results
 
 In training set, I used all the data I have and from 2014 to 2018, long position agent increased the amount of bitcoin from 2.5 to 5.01 and shor position agent increased the amount of bitcoin from 2.5 to 7.79. To sum up, the amount of bitcoin was increased from 5 to 12.8. This seems just very small profit, but when it comes to dollars, it started from $4000 and ended up to about $81920 dollars.
 
