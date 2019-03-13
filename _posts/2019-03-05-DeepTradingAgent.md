@@ -34,10 +34,10 @@ In this project, I used 1 hour candle because this was the minimum candle which 
 
 ## Reward Function
 ```
-Unrealized PnL = ($1/Average_Entry_Price - $1/Current Price) * Contract Quentity
+Unrealized PnL = ($1/Average_Entry_Price - $1/Current Price) * Contract Quantity
 ```
 
-For the reward, unrealized PnL(Profit & Loss) is used in both short and long positions. For example, if we are in short position, Contract Quentity is minus, so this equation works in both positions. Furthemore, each price has to divide $1 because basic currency in BitMex is BTC, the amount of bitcoin (we call it [Satoshi](https://en.bitcoin.it/wiki/Satoshi_(unit)))
+For the reward, unrealized PnL(Profit & Loss) is used in both short and long positions. For example, if we are in short position, Contract Quantity is minus, so this equation works in both positions. Furthemore, each price has to divide $1 because basic currency in BitMex is BTC, the amount of bitcoin (we call it [Satoshi](https://en.bitcoin.it/wiki/Satoshi_(unit)))
 ## Agent
 
 Final form of our agent is like this. Because market may go up trend or down trand, if we are in one position, we cannot take a profit all the time. 
@@ -55,7 +55,7 @@ Even if agent takes a lot of profits, the limitation of bet size is required to 
 Because this is Futures Exchange, there is liquidation price which makes you bankrupt. Therefore, stop loss is required. In this project, stop loss is operated when profit is -3% when the laverage are x5(short) and x4(long).
 
 
-## Result
+## Results
 
 In training set, I used all the data I have and from 2014 to 2018, long position agent increased the amount of bitcoin from 2.5 to 5.01 and shor position agent increased the amount of bitcoin from 2.5 to 7.79. To sum up, the amount of bitcoin was increased from 5 to 12.8. This seems just very small profit, but when it comes to dollars, it started from $4000 and ended up to about $81920 dollars.
 
